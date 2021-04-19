@@ -4,7 +4,7 @@ import styled from "styled-components"
 // Components
 import Wrapper from "../components/Containers/Wrapper";
 import Container from "../components/Containers/Container";
-import Link from "next/link";
+import LinkFix from "../components/UI/LinkFix";
 import Image from "../components/UI/ImageFix"
 
 // Blog
@@ -36,13 +36,13 @@ export default function Home({ allPostsData }) {
 
                 {allPostsData.map(({ slug, date, title, excerpt }) => (
                     <section key={slug}>
-                        <Link
+                        <LinkFix
                             key={slug}
                             href="/blog/[slug]"
                             as={`/blog/${slug}`}
                         >
                             <a>{title}</a>
-                        </Link>
+                        </LinkFix>
                     </section>
                 ))}
             </Container>

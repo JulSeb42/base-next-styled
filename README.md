@@ -42,6 +42,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 `UI/ImageFix`: Component to fix bugs from `next/image`.
 
+`UI/LinkFix`: Component to fix bugs with styled `next/link`.
+
 `AppHead`: All elements contained in the `<head>` of your page.
 
 `Breakpoints`: Media queries for styled-components.
