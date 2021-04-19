@@ -13,7 +13,7 @@ const LinkStyled = styled.a`
 
 export default function Logo(props) {
     return (
-        <Link href={props.href} passHref>
+        <Link {...props} passHref>
             <LinkStyled>{props.children}</LinkStyled>
         </Link>
     );

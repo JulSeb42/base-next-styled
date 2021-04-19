@@ -4,9 +4,7 @@ import styled from "styled-components"
 // Components
 import Wrapper from "../components/Containers/Wrapper";
 import Container from "../components/Containers/Container";
-// import LinkFix from "../components/UI/LinkFix";
 import Link from "next/link"
-import Image from "../components/UI/ImageFix"
 
 // Blog
 import { getSortedPosts } from "../lib/posts";
