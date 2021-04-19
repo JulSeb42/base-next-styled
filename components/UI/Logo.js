@@ -16,8 +16,8 @@ const LogoStyled = styled.a`
 
 export default function Logo() {
     return (
-        <Link href="/">
+        <Link prefetch href="/" passHref>
             <LogoStyled>{siteData.siteName}</LogoStyled>
         </Link>
-    )
+    );
 }
