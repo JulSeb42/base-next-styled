@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 // Components
 import Breakpoints from "../Breakpoints";
+import Social from "../Social/Social"
 
 // Data
 import SiteData from "../SiteData";
@@ -26,6 +27,8 @@ const CopyText = styled.p``;
 export default function Footer() {
     return (
         <Container>
+            <Social />
+            
             <CopyText>
                 &copy;{SiteData.siteAuthor} | {SiteData.siteYear}
             </CopyText>

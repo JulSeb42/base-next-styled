@@ -36,6 +36,10 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 `Footer/Footer`: Footer for every pages, included in the Wrapper.
 
+`Social/Social`: Social links for your projects. Add all the links you have there.
+
+`UI/Logo`: Logo link pointing to homepage. 
+
 `UI/ImageFix`: Component to fix bugs from `next/image`.
 
 `AppHead`: All elements contained in the `<head>` of your page.

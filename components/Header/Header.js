@@ -5,6 +5,7 @@ import styled from "styled-components";
 // Components
 import Link from "next/link";
 import Breakpoints from "../Breakpoints";
+import Logo from "../UI/Logo"
 
 // Data
 import siteData from "../SiteData";
@@ -20,12 +21,6 @@ const Container = styled.header`
     align-items: center;
     justify-content: space-between;
     z-index: 997;
-`;
-
-const Logo = styled.a`
-    color: black;
-    text-decoration: none;
-    font-weight: var(--font-weight-bold);
 `;
 
 const Nav = styled.nav`
@@ -131,9 +126,7 @@ export default function Header() {
 
     return (
         <Container>
-            <Link href="/">
-                <Logo>{siteData.siteName}</Logo>
-            </Link>
+            <Logo />
 
             <Burger />
 
