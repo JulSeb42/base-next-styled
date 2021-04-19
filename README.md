@@ -26,6 +26,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 `npm i styled-components`: Styled components, for CSS in JS.
 
+`npm i react-svg`: Fetch and display SVG files.
+
 ## Included components
 
 `Containers/Wrapper`: Basic elements contained in every pages.
@@ -43,6 +45,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 `UI/ImageFix`: Component to fix bugs from `next/image`.
 
 `UI/LinkFix`: Component to fix bugs with styled `next/link`.
+
+`UI/Icon`: Component to display SVG images as icons.
 
 `AppHead`: All elements contained in the `<head>` of your page.
 

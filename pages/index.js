@@ -6,6 +6,8 @@ import Wrapper from "../components/Containers/Wrapper";
 import Container from "../components/Containers/Container";
 import Link from "next/link"
 
+import Icon from "../components/UI/Icon"
+
 // Blog
 import { getSortedPosts } from "../lib/posts";
 
