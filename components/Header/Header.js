@@ -22,7 +22,7 @@ const Container = styled.header`
     z-index: 997;
 `;
 
-const Logo = styled(Link)`
+const Logo = styled.a`
     color: black;
     text-decoration: none;
     font-weight: var(--font-weight-bold);
@@ -131,9 +131,9 @@ export default function Header() {
 
     return (
         <Container>
-            <Logo href="/">
-                <a>{siteData.siteName}</a>
-            </Logo>
+            <Link href="/">
+                <Logo>{siteData.siteName}</Logo>
+            </Link>
 
             <Burger />
 
