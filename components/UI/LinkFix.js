@@ -13,7 +13,7 @@ const LinkStyled = styled.a`
 
 export default function Logo(props) {
     return (
-        <Link prefetch href={props.href} passHref>
+        <Link href={props.href} passHref>
             <LinkStyled>{props.children}</LinkStyled>
         </Link>
     );

@@ -1,3 +1,6 @@
+// Packages
+import styled from "styled-components"
+
 // Components
 import Wrapper from "../../components/Containers/Wrapper";
 import Container from "../../components/Containers/Container";
@@ -7,9 +10,6 @@ import { getAllPostSlugs, getPostdata } from "../../lib/posts";
 import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
-
-// Styles
-import styles from "../../styles/modules/Blog.module.scss";
 
 // Import all components used in MDX files here
 const components = {};
