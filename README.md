@@ -1,5 +1,7 @@
 A simple starter project for Next.js, using styled-components and MDX.
 
+## DO NOT UPDATE `next-mdx-remote` on 3.0
+
 ## Getting Started
 
 First, run the development server:
