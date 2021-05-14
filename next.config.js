@@ -1,8 +1,8 @@
-const withMDX = require("@next/mdx")
+const withMDX = require("@next/mdx");
 
 module.exports = withMDX({
-    pageExtensions: ["js", "mdx"]
-})
+    pageExtensions: ["js", "mdx"],
+});
 
 module.exports = {
     webpack: (config, { isServer }) => {
@@ -14,5 +14,5 @@ module.exports = {
         }
 
         return config;
-    }
+    },
 };

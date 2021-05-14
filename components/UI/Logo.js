@@ -1,11 +1,11 @@
 //Packages
-import styled from "styled-components"
+import styled from "styled-components";
 
 // Components
-import Link from "next/link"
+import Link from "next/link";
 
 // Data
-import siteData from "../SiteData"
+import siteData from "../SiteData";
 
 //Styles
 const LogoStyled = styled.a`

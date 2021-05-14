@@ -1,12 +1,10 @@
 // Packages
-import styled from "styled-components"
+import styled from "styled-components";
 
 // Components
 import Wrapper from "../components/Containers/Wrapper";
 import Container from "../components/Containers/Container";
-import Link from "next/link"
-
-import Icon from "../components/UI/Icon"
+import Link from "next/link";
 
 // Blog
 import { getSortedPosts } from "../lib/posts";
@@ -16,10 +14,9 @@ import SiteData from "../components/SiteData";
 
 // Styles
 
-
 // Text variables
 const pageTitle = "Homepage";
-const blogTitle = "Posts"
+const blogTitle = "Posts";
 const description = "Meta description";
 const keywords = ["keyword", "keyword"];
 

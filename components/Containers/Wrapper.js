@@ -6,7 +6,11 @@ import Footer from "../Footer/Footer";
 export default function Wrapper(props) {
     return (
         <>
-            <AppHead {...props} />
+            <AppHead
+                title={props.title}
+                description={props.description}
+                keywords={props.keywords}
+            />
 
             <Header />
 

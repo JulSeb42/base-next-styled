@@ -1,8 +1,8 @@
 //Packages
-import styled from "styled-components"
+import styled from "styled-components";
 
 // Data
-import siteData from "../SiteData"
+import siteData from "../SiteData";
 
 //Styles
 const Container = styled.ul`
@@ -23,31 +23,31 @@ const Container = styled.ul`
             text-decoration: none;
         }
     }
-`
+`;
 
 const socialLinks = [
     {
         id: 0,
         name: "Email",
-        url: `mailto:${siteData.siteEmail}`
+        url: `mailto:${siteData.siteEmail}`,
     },
     {
         id: 1,
         name: "Github",
         url: "#",
-    }
-]
+    },
+];
 
 export default function Social() {
     return (
         <Container>
-            {socialLinks.map(({ id, name, url }) =>
+            {socialLinks.map(({ id, name, url }) => (
                 <li key={id}>
                     <a href={url} target={name != "Email" && "_blank"}>
                         {name}
                     </a>
                 </li>
-            )}
+            ))}
         </Container>
-    )
+    );
 }

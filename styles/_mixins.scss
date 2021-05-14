@@ -111,9 +111,13 @@
     appearance: $value;
 }
 
-@mixin icon($unicode) {
-    font-family: "fajny-css-icons";
-    content: $unicode;
+@mixin icon($icon, $size) {
+    content: "";
+    background: url(/images/icons/#{$icon});
+    width: $size;
+    height: $size;
+    background-size: contain;
+    background-position: center;
 }
 
 @mixin transition-delay($delay) {

@@ -75,5 +75,5 @@
     user-select: none;
 }
 .center {
-    @include flexbox(center, center, nowrap)
+    @include flexbox(center, center, nowrap);
 }

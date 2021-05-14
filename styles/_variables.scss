@@ -16,7 +16,8 @@
     // Colors
 
     // Fonts
-    --font-body: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     // Font weights
     --font-weight: 400;
@@ -34,6 +35,6 @@
     }
 
     // Transitions
-    --transition-short: all .2s ease;
-    --transition-long: all .5s ease;
+    --transition-short: all 0.2s ease;
+    --transition-long: all 0.5s ease;
 }

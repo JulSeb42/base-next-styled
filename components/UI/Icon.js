@@ -1,19 +1,23 @@
-import styled, {css} from "styled-components"
+import styled, { css } from "styled-components";
 import { ReactSVG } from "react-svg";
 
 const StyledSVGIcon = styled(ReactSVG)`
     svg {
         fill: black;
-        ${({ size }) => size && css`
-            width: ${size};
-            height: ${size};
-        `}
+        ${({ size }) =>
+            size &&
+            css`
+                width: ${size};
+                height: ${size};
+            `}
     }
 
     path {
-        ${({ color }) => color && css`
-            fill: ${color};
-        `}
+        ${({ color }) =>
+            color &&
+            css`
+                fill: ${color};
+            `}
     }
 `;
 
@@ -25,7 +29,7 @@ export default function Icon(props) {
             size={props.size}
         />
     );
-};
+}
 
 // How to use
 // Import in the file you want to use this component
