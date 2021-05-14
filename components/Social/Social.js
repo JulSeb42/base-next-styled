@@ -43,7 +43,7 @@ export default function Social() {
         <Container>
             {socialLinks.map(({ id, name, url }) =>
                 <li key={id}>
-                    <a href={url} target={name != "Email" ? "_blank" : ""}>
+                    <a href={url} target={name != "Email" && "_blank"}>
                         {name}
                     </a>
                 </li>

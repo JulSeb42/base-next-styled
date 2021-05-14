@@ -32,4 +32,8 @@
         --grid-column: 1;
         --grid-padding: var(--margin-xxl) 5vw;
     }
+
+    // Transitions
+    --transition-short: all .2s ease;
+    --transition-long: all .5s ease;
 }

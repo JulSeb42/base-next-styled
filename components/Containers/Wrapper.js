@@ -5,14 +5,14 @@ import Footer from "../Footer/Footer";
 
 export default function Wrapper(props) {
     return (
-        <div>
-            <AppHead {...props}/>
+        <>
+            <AppHead {...props} />
 
             <Header />
 
             {props.children}
 
             <Footer />
-        </div>
+        </>
     );
 }

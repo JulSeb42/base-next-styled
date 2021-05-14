@@ -1,5 +1,5 @@
 // Packages
-import styled from "styled-components"
+import styled from "styled-components";
 
 // Styles
 const Main = styled.main`

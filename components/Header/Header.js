@@ -5,10 +5,7 @@ import styled from "styled-components";
 // Components
 import Link from "next/link";
 import Breakpoints from "../Breakpoints";
-import Logo from "../UI/Logo"
-
-// Data
-import siteData from "../SiteData";
+import Logo from "../UI/Logo";
 
 // Styles
 const Container = styled.header`
@@ -80,6 +77,7 @@ const BurgerStyled = styled.div`
         background-color: black;
         position: absolute;
         left: 0;
+        transition: var(--transition-short);
 
         &:first-child {
             top: 0;
@@ -97,6 +95,22 @@ const BurgerStyled = styled.div`
     @media ${Breakpoints.MobileL} {
         display: inherit;
     }
+
+    &.BurgerOpen span {
+        &:first-child {
+            transform: rotate(45deg);
+            top: 9px;
+        }
+
+        &:nth-child(2) {
+            width: 0;
+        }
+
+        &:last-child {
+            transform: rotate(-45deg);
+            bottom: 9px;
+        }
+    }
 `;
 
 // Nav links
@@ -113,22 +127,23 @@ export default function Header() {
     const [isNav, setIsNav] = useState(false);
     const contentNav = isNav ? "MenuOpen" : "";
 
-    // Burger component
-    const Burger = () => {
-        return (
-            <BurgerStyled onClick={() => setIsNav(!isNav)}>
-                <span />
-                <span />
-                <span />
-            </BurgerStyled>
-        );
-    };
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+    const BurgerOpen = isBurgerOpen ? "BurgerOpen" : "";
 
     return (
         <Container>
             <Logo />
-
-            <Burger />
+            <BurgerStyled
+                className={BurgerOpen}
+                onClick={() => {
+                    setIsNav(!isNav);
+                    setIsBurgerOpen(!BurgerOpen);
+                }}
+            >
+                <span />
+                <span />
+                <span />
+            </BurgerStyled>
 
             <Nav className={contentNav}>
                 {navLinks.map(({ name, url, id }) => (
