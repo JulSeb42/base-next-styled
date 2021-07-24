@@ -1,35 +1,58 @@
+// Packages
+import React from "react";
 import styled, { css } from "styled-components";
 import { ReactSVG } from "react-svg";
 
-const StyledSVGIcon = styled(ReactSVG)`
-    svg {
-        fill: black;
-        ${({ size }) =>
-            size &&
-            css`
-                width: ${size};
-                height: ${size};
-            `}
+// Styles
+const Container = styled(ReactSVG)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${(props) => `${props.size}px`};
+    height: ${(props) => `${props.size}px`};
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: ${(props) => `${props.size}px`};
+        height: ${(props) => `${props.size}px`};
     }
 
-    path {
-        ${({ color }) =>
-            color &&
-            css`
-                fill: ${color};
-            `}
+    svg {
+        fill: black;
+        width: ${(props) => `${props.size}px`};
+        height: ${(props) => `${props.size}px`};
+
+        path {
+            fill: ${(props) => props.color};
+        }
     }
 `;
 
-export default function Icon(props) {
+function Icon(props) {
     return (
-        <StyledSVGIcon
+        <Container
             src={`/icons/${props.name}.svg`}
-            color={props.color}
             size={props.size}
+            color={props.color}
+            wrapper="span"
+            {...props}
         />
     );
 }
+
+export default Icon;
+
+export const IconMixin = ({ icon, size, color }) => css`
+    content: "";
+    width: ${size};
+    height: ${size};
+    mask: url("/icons/${icon}.svg") no-repeat 50% 50%;
+    mask-size: cover;
+    background-color: ${color};
+    display: inline-block;
+`;
 
 // How to use
 // Import in the file you want to use this component

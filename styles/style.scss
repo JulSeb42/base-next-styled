@@ -10,7 +10,7 @@
 /*=============================================== General ===============================================*/
 
 * {
-    box-sizing: border-box;
+    @include box-sizing(border-box);
     outline: none;
 }
 

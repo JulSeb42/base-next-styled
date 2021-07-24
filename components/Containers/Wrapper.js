@@ -1,7 +1,7 @@
 // Components
 import AppHead from "../AppHead";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default function Wrapper(props) {
     return (

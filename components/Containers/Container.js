@@ -1,16 +1,19 @@
 // Packages
 import styled from "styled-components";
 
+// Components
+import * as Variables from "../Variables";
+
 // Styles
 const Main = styled.main`
     width: 100vw;
     display: grid;
-    grid-template-columns: var(--grid-template);
-    padding: var(--grid-padding);
-    row-gap: var(--margin-m);
+    grid-template-columns: ${Variables.Container.Template};
+    padding: ${Variables.Container.Padding};
+    row-gap: ${Variables.Margins.M};
 
     & > * {
-        grid-column: var(--grid-column);
+        grid-column: ${Variables.Container.Column};
     }
 `;
 

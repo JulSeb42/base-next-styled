@@ -1,8 +1,11 @@
 //Packages
 import styled from "styled-components";
 
+// Components
+import * as Variables from "./Variables";
+
 // Data
-import siteData from "../SiteData";
+import siteData from "./SiteData";
 
 //Styles
 const Container = styled.ul`
@@ -15,7 +18,7 @@ const Container = styled.ul`
 
     li {
         &:not(:last-child) {
-            margin-right: var(--margin-m);
+            margin-right: ${Variables.Margins.M};
         }
 
         a {

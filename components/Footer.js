@@ -2,11 +2,11 @@
 import styled from "styled-components";
 
 // Components
-import Breakpoints from "../Breakpoints";
-import Social from "../Social/Social";
+import * as Variables from "./Variables";
+import Social from "./Social";
 
 // Data
-import SiteData from "../SiteData";
+import SiteData from "./SiteData";
 
 // Styles
 const Container = styled.footer`
@@ -14,9 +14,9 @@ const Container = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--margin-l) 5vw;
+    padding: ${Variables.Margins.L} 5vw;
 
-    @media ${Breakpoints.MobileL} {
+    @media ${Variables.Breakpoints.MobileL} {
         justify-content: center;
         flex-direction: column;
     }

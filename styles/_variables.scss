@@ -10,28 +10,26 @@
     --margin-xs: 8px;
     --margin-xxs: 4px;
 
-    // Line height
-    --line-height: 1.5;
-
     // Colors
 
     // Fonts
     --font-body: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --line-height: 1.5;
 
     // Font weights
-    --font-weight: 400;
+    --font-weight-regular: 400;
     --font-weight-bold: 700;
 
     // Container
-    --grid-template: 1fr 600px 1fr;
-    --grid-column: 2;
-    --grid-padding: var(--margin-xxl) 0;
+    --container-template: 1fr 600px 1fr;
+    --container-column: 2;
+    --container-padding: var(--margin-xxl) 0;
 
     @include mobile() {
-        --grid-template: 1fr;
-        --grid-column: 1;
-        --grid-padding: var(--margin-xxl) 5vw;
+        --container-template: 1fr;
+        --container-column: 1;
+        --container-padding: var(--margin-xxl) 5vw;
     }
 
     // Transitions

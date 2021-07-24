@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 // Components
 import Link from "next/link";
-import Breakpoints from "../Breakpoints";
-import Logo from "../UI/Logo";
+import * as Variables from "./Variables";
+import Logo from "./UI/Logo";
 
 // Styles
 const Container = styled.header`
@@ -13,7 +13,7 @@ const Container = styled.header`
     position: fixed;
     top: 0;
     left: 0;
-    padding: var(--margin-l) 5vw;
+    padding: ${Variables.Margins.L} 5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,11 +30,11 @@ const Nav = styled.nav`
         text-decoration: none;
 
         &:not(:last-child) {
-            margin-right: var(--margin-l);
+            margin-right: ${Variables.Margins.L};
         }
     }
 
-    @media ${Breakpoints.MobileL} {
+    @media ${Variables.Breakpoints.MobileL} {
         position: absolute;
         top: 0;
         left: 100vw;
@@ -46,14 +46,14 @@ const Nav = styled.nav`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        transition: all 0.5s ease;
+        transition: ${Variables.Transitions.Long};
 
         a {
             font-size: 24px;
 
             &:not(:last-child) {
                 margin-right: 0;
-                margin-bottom: var(--margin-l);
+                margin-bottom: ${Variables.Margins.L};
             }
         }
 
@@ -77,7 +77,7 @@ const BurgerStyled = styled.div`
         background-color: black;
         position: absolute;
         left: 0;
-        transition: var(--transition-short);
+        transition: ${Variables.Transitions.Short};
 
         &:first-child {
             top: 0;
@@ -92,7 +92,7 @@ const BurgerStyled = styled.div`
         }
     }
 
-    @media ${Breakpoints.MobileL} {
+    @media ${Variables.Breakpoints.MobileL} {
         display: inherit;
     }
 

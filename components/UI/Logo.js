@@ -1,8 +1,9 @@
 //Packages
 import styled from "styled-components";
+import Link from "next/link";
 
 // Components
-import Link from "next/link";
+import * as Variables from "../Variables";
 
 // Data
 import siteData from "../SiteData";
@@ -11,7 +12,7 @@ import siteData from "../SiteData";
 const LogoStyled = styled.a`
     color: black;
     text-decoration: none;
-    font-weight: var(--font-weight-bold);
+    font-weight: ${Variables.FontWeights.Bold};
 `;
 
 export default function Logo() {
