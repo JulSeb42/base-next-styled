@@ -44,18 +44,29 @@ function Icon(props) {
 
 export default Icon;
 
-export const IconMixin = ({ icon, size, color }) => css`
-    content: "";
-    width: ${size};
-    height: ${size};
-    mask: url("/icons/${icon}.svg") no-repeat 50% 50%;
-    mask-size: cover;
-    background-color: ${color};
-    display: inline-block;
-`;
-
 // How to use
 // Import in the file you want to use this component
 // import Icon from "/path/to/Icon.js"
 // Use the component
 // <Icon name="name-of-icon" size="32px" color="color" />
+
+export const IconMixin = ({ icon, size, color }) => css`
+    content: "";
+    mask: url("/icons/${icon}.svg") no-repeat 50% 50%;
+    width: ${size};
+    height: ${size};
+    mask-size: cover;
+    background-color: ${color};
+    display: inline-block;
+`;
+
+// How to use the mixin
+// Import in the file you want to use this component
+// import { IconMixin } from "/path/to/Icon.js"
+// div:before {
+//     ${IconMixin({
+//         icon: "name-of-icon",
+//         size: "12px",
+//         color: "black",
+//     })}
+// }
