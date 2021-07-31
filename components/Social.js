@@ -2,10 +2,10 @@
 import styled from "styled-components";
 
 // Components
-import * as Variables from "./Variables";
+import * as Variables from "./styles/Variables";
 
 // Data
-import siteData from "./SiteData";
+import { SocialLinks } from "./data/Social";
 
 //Styles
 const Container = styled.ul`
@@ -28,23 +28,12 @@ const Container = styled.ul`
     }
 `;
 
-const socialLinks = [
-    {
-        id: 0,
-        name: "Email",
-        url: `mailto:${siteData.siteEmail}`,
-    },
-    {
-        id: 1,
-        name: "Github",
-        url: "#",
-    },
-];
+
 
 export default function Social() {
     return (
         <Container>
-            {socialLinks.map(({ id, name, url }) => (
+            {SocialLinks.map(({ id, name, url }) => (
                 <li key={id}>
                     <a href={url} target={name != "Email" && "_blank"}>
                         {name}

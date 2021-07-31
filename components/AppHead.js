@@ -2,7 +2,7 @@
 import Head from "next/head";
 
 // Data
-import SiteData from "./SiteData";
+import SiteData from "./data/SiteData";
 
 export default function AppHead(props) {
     return (

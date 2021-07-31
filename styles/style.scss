@@ -4,26 +4,7 @@
 /*=============================================== Imports ===============================================*/
 
 @import "mixins";
-@import "variables";
-@import "fonts";
-
-/*=============================================== General ===============================================*/
-
-* {
-    @include box-sizing(border-box);
-    outline: none;
-}
-
-html,
-body {
-    @include paMar();
-    font-family: var(--font-body);
-    line-height: var(--line-height);
-}
-
-img {
-    max-width: 100%;
-}
+@import "reset";
 
 /*=============================================== Helpers ===============================================*/
 

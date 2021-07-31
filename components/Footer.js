@@ -2,11 +2,11 @@
 import styled from "styled-components";
 
 // Components
-import * as Variables from "./Variables";
+import * as Variables from "./styles/Variables";
 import Social from "./Social";
 
 // Data
-import SiteData from "./SiteData";
+import SiteData from "./data/SiteData";
 
 // Styles
 const Container = styled.footer`

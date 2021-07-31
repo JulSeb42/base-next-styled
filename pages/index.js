@@ -10,7 +10,7 @@ import Link from "next/link";
 import { getSortedPosts } from "../lib/posts";
 
 // Data
-import SiteData from "../components/SiteData";
+import SiteData from "../components/data/SiteData";
 
 // Styles
 

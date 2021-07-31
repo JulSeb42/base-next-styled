@@ -1,11 +1,14 @@
 // Packages
 import { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 // Components
-import Link from "next/link";
-import * as Variables from "./Variables";
-import Logo from "./UI/Logo";
+import * as Variables from "./styles/Variables";
+import Logo from "./ui/Logo";
+
+// Data
+import { NavLinks } from "./data/NavLinks";
 
 // Styles
 const Container = styled.header`
@@ -113,15 +116,6 @@ const BurgerStyled = styled.div`
     }
 `;
 
-// Nav links
-const navLinks = [
-    {
-        id: 0,
-        name: "Home",
-        url: "/",
-    },
-];
-
 export default function Header() {
     // Hamburger navigation on mobile
     const [isNav, setIsNav] = useState(false);
@@ -146,7 +140,7 @@ export default function Header() {
             </BurgerStyled>
 
             <Nav className={contentNav}>
-                {navLinks.map(({ name, url, id }) => (
+                {NavLinks.map(({ name, url, id }) => (
                     <Link href={url} key={id}>
                         <a>{name}</a>
                     </Link>

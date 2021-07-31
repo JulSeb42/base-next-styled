@@ -14,20 +14,6 @@
     flex-wrap: $wrap;
 }
 
-@mixin inline-flex($align, $justify, $wrap) {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-align: $align;
-    -ms-flex-align: $align;
-    align-items: $align;
-    -webkit-box-pack: $justify;
-    -ms-flex-pack: $justify;
-    justify-content: $justify;
-    -ms-flex-wrap: $wrap;
-    flex-wrap: $wrap;
-}
-
 @mixin flex-direction($direction) {
     @if $direction == column {
         -webkit-box-orient: vertical;
@@ -77,12 +63,12 @@
     grid-column: span $number;
 }
 
-@mixin transition($content) {
-    -webkit-transition: $content;
-    -moz-transition: $content;
-    -ms-transition: $content;
-    -o-transition: $content;
-    transition: $content;
+@mixin transition($property, $duration, $function) {
+    -webkit-transition: $property $duration $function;
+    -moz-transition: $property $duration $function;
+    -ms-transition: $property $duration $function;
+    -o-transition: $property $duration $function;
+    transition: $property $duration $function;
 }
 
 @mixin transition-timing($method) {
@@ -125,16 +111,13 @@
     appearance: $value;
 }
 
-@mixin icon($icon, $size, $color) {
+@mixin icon($icon, $size) {
     content: "";
+    background: url(/images/icons/#{$icon});
     width: $size;
     height: $size;
-    -webkit-mask: url("/assets/images/icons/#{$icon}.svg") no-repeat 50% 50%;
-    mask: url("/assets/images/icons/#{$icon}.svg") no-repeat 50% 50%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    background-color: $color;
-    display: inline-block;
+    background-size: contain;
+    background-position: center;
 }
 
 @mixin transition-delay($delay) {
@@ -144,10 +127,14 @@
     transition-delay: $delay;
 }
 
+@mixin font-size($font-size) {
+    font-size: $font-size;
+}
+
 @mixin links($color, $hover) {
     color: $color;
     text-decoration: none;
-    @include transition(var(--transition-short));
+    @include transition(all, 0.2s, ease);
     @include body-bold();
 
     &:hover {

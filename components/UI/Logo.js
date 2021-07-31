@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Link from "next/link";
 
 // Components
-import * as Variables from "../Variables";
+import * as Variables from "../styles/Variables";
 
 // Data
-import siteData from "../SiteData";
+import siteData from "../data/SiteData";
 
 //Styles
 const LogoStyled = styled.a`

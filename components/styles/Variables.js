@@ -3,40 +3,52 @@ export const Colors = {};
 
 // Margins
 export const Margins = {
-    XXL: "var(--margin-xxl)",
-    XL: "var(--margin-xl)",
-    L: "var(--margin-l)",
-    M: "var(--margin-m)",
-    S: "var(--margin-s)",
-    XS: "var(--margin-xs)",
-    XXS: "var(--margin-xxs)",
+    XXL: "48px",
+    XL: "32px",
+    L: "24px",
+    M: "16px",
+    S: "12px",
+    XS: "8px",
+    XXS: "4px",
 };
 
 // Fonts
 export const FontFamilies = {
-    Body: "var(--font-body)",
+    Body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
 };
 
 // Font weights
 export const FontWeights = {
-    Regular: "var(--font-weight-regular)",
-    Bold: "var(--font-weight-bold)",
+    Regular: 400,
+    Bold: 700,
 };
 
 // Line height
-export const LineHeight = "var(--line-height)";
+export const LineHeight = 1.4;
+
+export const Radiuses = {
+    XL: "16px",
+    L: "12px",
+    M: "8px",
+    S: "4px",
+    Round: "99em",
+};
 
 // Container template
 export const Container = {
-    Template: "var(--container-template)",
-    Column: "var(--container-column)",
-    Padding: "var(--container-padding)",
+    Template: "1fr 600px 1fr",
+    Column: 2,
+    Padding: `${Margins.XXL} 0`,
+
+    TemplateTablet: "1fr",
+    ColumnTablet: 1,
+    PaddingTablet: `${Margins.XXL} 5vw`,
 };
 
 // Transitions
 export const Transitions = {
-    Short: "var(--transition-short)",
-    Long: "var(--transition-long)",
+    Short: "all .2s ease",
+    Long: "all .5s ease",
 };
 
 // Media queries
