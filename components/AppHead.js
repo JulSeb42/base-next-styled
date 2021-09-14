@@ -11,7 +11,7 @@ export default function AppHead(props) {
                 {props.title} | {SiteData.siteName}
             </title>
             <link rel="icon" href={SiteData.siteFavicon} />
-            <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+            <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
             <meta
                 content="width=device-width, initial-scale=1"
                 name="viewport"
