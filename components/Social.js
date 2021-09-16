@@ -35,11 +35,15 @@ export default function Social() {
         <Container>
             {SocialLinks.map(({ id, name, url }) => (
                 <li key={id}>
-                    <a href={url} target={name != "Email" && "_blank"}>
+                    <a
+                        href={url}
+                        target={name != "Email" && "_blank"}
+                        rel="noopener noreferrer"
+                    >
                         {name}
                     </a>
                 </li>
             ))}
         </Container>
-    );
+    )
 }
