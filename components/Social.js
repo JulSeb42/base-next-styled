@@ -1,11 +1,11 @@
 //Packages
-import styled from "styled-components";
+import styled from "styled-components"
 
 // Components
-import * as Variables from "./styles/Variables";
+import * as Variables from "./styles/Variables"
 
 // Data
-import { SocialLinks } from "./data/Social";
+import { SocialLinks } from "./data/Social"
 
 //Styles
 const Container = styled.ul`
@@ -26,22 +26,20 @@ const Container = styled.ul`
             text-decoration: none;
         }
     }
-`;
-
-
+`
 
 export default function Social() {
     return (
         <Container>
             {SocialLinks.map(({ id, name, url }) => (
                 <li key={id}>
-                    <a
-                        href={url}
-                        target={name != "Email" && "_blank"}
-                        rel="noopener noreferrer"
-                    >
-                        {name}
-                    </a>
+                    {name === "Email" ? (
+                        <a href={url}>{name}</a>
+                    ) : (
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                            {name}
+                        </a>
+                    )}
                 </li>
             ))}
         </Container>
